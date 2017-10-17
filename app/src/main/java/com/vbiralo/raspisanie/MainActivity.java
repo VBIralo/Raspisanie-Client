@@ -9,6 +9,7 @@ import android.support.v7.app.*;
 import android.view.*;
 import android.webkit.*;
 import android.graphics.*;
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -28,9 +29,15 @@ public class MainActivity extends AppCompatActivity {
         mWebView.getSettings().setCacheMode(WebSettings.LOAD_NORMAL);
         mWebView.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
 
-        mWebView.loadUrl("http://sh.vbiralo.xyz/l/" + PreferenceManager.getDefaultSharedPreferences(this).getString("site_url", getString(R.string.site_url)));
-        mWebView.setWebViewClient(new MyWebViewClient());
+        if (PreferenceManager.getDefaultSharedPreferences(this).getString("site_url", getString(R.string.site_url)).toString().equals(""))
+        {
+            mWebView.loadUrl("http://sh.vbiralo.xyz/");
+        }
+        else {
+            mWebView.loadUrl("http://sh.vbiralo.xyz/l/" + PreferenceManager.getDefaultSharedPreferences(this).getString("site_url", getString(R.string.site_url)));
+        }
     }
+
 
     private class MyWebViewClient extends WebViewClient {
 
@@ -53,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuItem refresh = menu.add("Refresh");
+        MenuItem refresh = menu.add("Обновить");
         refresh.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
         Drawable icon_refresh = this.getResources().getDrawable(R.drawable.ic_refresh);
         icon_refresh.setTint(Color.WHITE);

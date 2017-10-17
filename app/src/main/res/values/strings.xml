@@ -11,8 +11,8 @@
     <string name="pref_link_vk_summary">\@vbiralo</string>
     <string name="pref_link_telegram">https://telegram.me/vbiralo</string>
     <string name="pref_link_telegram_summary">\@vbiralo</string>
-    <string name="version">2.1(release)</string>
-    <string name="site_url">11b</string>
+    <string name="version">1.0(release)</string>
+    <string name="site_url"></string>
     <string name="pref_openmode">Режим открытия</string>
     <string name="action_settings">Настройки</string>
 </resources>
