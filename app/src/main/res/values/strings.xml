@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">Raspisanie</string>
+    <string name="app_name">Расписание</string>
+    <string name="about">О программе</string>
+
+    <string name="wifi_title">Wi-Fi</string>
+    <string name="wifi_summary">Вкл. или выкл. сеть WiFi</string>
+    <string name="hints_title">Подсказки</string>
+    <string name="hints_summary">Показывать подсказки</string>
+    <string name="pref_default_display_name">Vlad Biralo</string>
+    <string name="pref_link_vk">https://vk.com/id198082755</string>
+    <string name="pref_link_vk_summary">\@vbiralo</string>
+    <string name="pref_link_telegram">https://telegram.me/vbiralo</string>
+    <string name="pref_link_telegram_summary">\@vbiralo</string>
+    <string name="version">2.1(release)</string>
+    <string name="site_url">11b</string>
+    <string name="pref_openmode">Режим открытия</string>
+    <string name="action_settings">Настройки</string>
 </resources>

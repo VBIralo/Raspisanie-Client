@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <PreferenceCategory
+        android:title="Разработчик">
+        <Preference
+            android:selectable="true"
+            android:title="@string/pref_default_display_name"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Контакты">
+        <Preference
+            android:selectable="true"
+            android:summary="@string/pref_link_vk_summary"
+            android:title="VK">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/pref_link_vk"/>
+        </Preference>
+        <Preference
+            android:selectable="true"
+            android:summary="@string/pref_link_telegram_summary"
+            android:title="Telegram">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="@string/pref_link_telegram"/>
+        </Preference>
+        <Preference
+            android:summary="Если нашли ошибку или хотите сделать расписание для своего класса - напишите мне"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Параметры">
+        <EditTextPreference
+            android:defaultValue="@string/site_url"
+            android:dialogTitle="Введите номер класса (пример: 11b)"
+            android:key="site_url"
+            android:title="Страница по умолчанию"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Версия">
+        <Preference
+            android:title="@string/version"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>
